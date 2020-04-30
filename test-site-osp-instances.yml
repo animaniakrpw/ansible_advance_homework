@@ -10,9 +10,5 @@
 
 - hosts: workstation
   become: yes
-  tasks:
-  - name: Run OSP inst create
-    debug:
-      msg: Run OSP instances creation from host workstation-{{OSP_GUID}}.rhpds.opentlc.com
-#  roles:
-#    - osp-servers
+  roles:
+    - osp-servers
